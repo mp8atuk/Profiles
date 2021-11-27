@@ -1,42 +1,42 @@
 # Forum
-DOMAIN-SUFFIX,bitcointalk.org,CRYPTO
+host-suffix,bitcointalk.org,CRYPTO
 
 # Exchange
-DOMAIN-SUFFIX,aex.com,CRYPTO
-DOMAIN-SUFFIX,bibox.com,CRYPTO
-DOMAIN-SUFFIX,binance.cc,CRYPTO
-DOMAIN-SUFFIX,binance.com,CRYPTO
-DOMAIN-SUFFIX,binance.me,CRYPTO
-DOMAIN-SUFFIX,binance.us,CRYPTO
-DOMAIN-SUFFIX,bitfinex.com,CRYPTO
-DOMAIN-SUFFIX,bithumb.com,CRYPTO
-DOMAIN-SUFFIX,bitmex.com,CRYPTO
-DOMAIN-SUFFIX,bitstamp.net,CRYPTO
-DOMAIN-SUFFIX,bittrex.com,CRYPTO
-DOMAIN-SUFFIX,bybit.com,CRYPTO
-DOMAIN-SUFFIX,coinbase.com,CRYPTO
-DOMAIN-SUFFIX,coincheck.com,CRYPTO
-DOMAIN-SUFFIX,coinone.co.kr,CRYPTO
-DOMAIN-SUFFIX,ftx.com,CRYPTO
-DOMAIN-SUFFIX,gate.io,CRYPTO
-DOMAIN-SUFFIX,gemini.com,CRYPTO
-DOMAIN-SUFFIX,huobi.com,CRYPTO
-DOMAIN-SUFFIX,korbit.co.kr,CRYPTO
-DOMAIN-SUFFIX,kraken.com,CRYPTO
-DOMAIN-SUFFIX,kucoin.com,CRYPTO
-DOMAIN-SUFFIX,liquid.com,CRYPTO
-DOMAIN-SUFFIX,okex.com,CRYPTO
-DOMAIN-SUFFIX,poloniex.com,CRYPTO
-DOMAIN-SUFFIX,sushi.com,CRYPTO
-DOMAIN-SUFFIX,uniswap.org,CRYPTO
-DOMAIN-SUFFIX,zb.com,CRYPTO
+host-suffix,aex.com,CRYPTO
+host-suffix,bibox.com,CRYPTO
+host-suffix,binance.cc,CRYPTO
+host-suffix,binance.com,CRYPTO
+host-suffix,binance.me,CRYPTO
+host-suffix,binance.us,CRYPTO
+host-suffix,bitfinex.com,CRYPTO
+host-suffix,bithumb.com,CRYPTO
+host-suffix,bitmex.com,CRYPTO
+host-suffix,bitstamp.net,CRYPTO
+host-suffix,bittrex.com,CRYPTO
+host-suffix,bybit.com,CRYPTO
+host-suffix,coinbase.com,CRYPTO
+host-suffix,coincheck.com,CRYPTO
+host-suffix,coinone.co.kr,CRYPTO
+host-suffix,ftx.com,CRYPTO
+host-suffix,gate.io,CRYPTO
+host-suffix,gemini.com,CRYPTO
+host-suffix,huobi.com,CRYPTO
+host-suffix,korbit.co.kr,CRYPTO
+host-suffix,kraken.com,CRYPTO
+host-suffix,kucoin.com,CRYPTO
+host-suffix,liquid.com,CRYPTO
+host-suffix,okex.com,CRYPTO
+host-suffix,poloniex.com,CRYPTO
+host-suffix,sushi.com,CRYPTO
+host-suffix,uniswap.org,CRYPTO
+host-suffix,zb.com,CRYPTO
 
 # Analysis
-DOMAIN-SUFFIX,aicoin.com,CRYPTO
-DOMAIN-SUFFIX,aimoon.com,CRYPTO
-DOMAIN-SUFFIX,coingecko.com,CRYPTO
-DOMAIN-SUFFIX,coinmarketcap.com,CRYPTO
-DOMAIN-SUFFIX,tradingview.com,CRYPTO
+host-suffix,aicoin.com,CRYPTO
+host-suffix,aimoon.com,CRYPTO
+host-suffix,coingecko.com,CRYPTO
+host-suffix,coinmarketcap.com,CRYPTO
+host-suffix,tradingview.com,CRYPTO
 
 #Defi
-DOMAIN-SUFFIX,aave.com,CRYPTO
+host-suffix,aave.com,CRYPTO

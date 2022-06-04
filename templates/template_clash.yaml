@@ -1,0 +1,294 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+proxies:
+  {-=-=servers-=-=-}
+  - {name: rookey.aws.hk, server: rookey.engineerdock.com, port: 4443, type: vmess, uuid: 9ae87435-e5e7-4fee-8448-1f3d724a2bcd, alterId: 0, cipher: auto, tls: true, udp: true}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - TW
+      - KR
+      - GAME-KR
+      - HK
+      - SG
+      - UPLOAD-HK
+      - US
+      - rookey.aws.hk
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - TW
+      - KR
+      - HK
+      - SG
+      - US
+      - rookey.aws.hk
+  - name: Youtube
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - TW
+      - KR
+      - HK
+      - SG
+      - US
+      - rookey.aws.hk
+  - name: Crypto
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - TW
+      - KR
+      - HK
+      - SG
+      - US
+      - rookey.aws.hk
+  - name: Netflix
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - TW
+      - KR
+      - HK
+      - SG
+      - US
+      - rookey.aws.hk
+  - name: DisneyPlus
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - TW
+      - KR
+      - HK
+      - SG
+      - US
+      - rookey.aws.hk
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - TW
+      - KR
+      - HK
+      - SG
+      - US
+      - rookey.aws.hk
+  - name: 📢 谷歌FCM
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - TW
+      - KR
+      - HK
+      - SG
+      - US
+      - rookey.aws.hk
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - TW
+      - KR
+      - HK
+      - SG
+      - US
+      - rookey.aws.hk
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - TW
+      - KR
+      - HK
+      - SG
+      - US
+      - rookey.aws.hk
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - TW
+      - KR
+      - HK
+      - SG
+      - US
+      - rookey.aws.hk
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🆎 AdBlock
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - TW
+      - KR
+      - HK
+      - SG
+      - US
+      - rookey.aws.hk
+{-=-=proxy-group-=-=-}
+rule-providers:
+  youtube-domain:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/YouTube/YouTube.yaml"
+    path: ./ruleset/YouTube.yaml
+    interval: 86400
+  crypto-domain:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/mp8atuk/Profiles/ma%D1%95ter/clash_config_crypto.yaml"
+    path: ./ruleset/Crypto.yaml
+    interval: 86400
+  netflix-domain:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/Netflix/Netflix.yaml"
+    path: ./ruleset/Netflix.yaml
+    interval: 86400
+  disneyplus-domain:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/Disney/Disney.yaml"
+    path: ./ruleset/Disney.yaml
+    interval: 86400
+  jd-domain:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/JingDong/JingDong.yaml"
+    path: ./ruleset/jd.yaml
+    interval: 86400
+  reject:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/mp8atuk/Profiles/ma%D1%95ter/blocked_domain.yaml"
+    path: ./ruleset/reject.yaml
+    interval: 86400
+  direct_link:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/mp8atuk/Profiles/ma%D1%95ter/clash_config_direct.yaml"
+    path: ./ruleset/clash_config_direct.yaml
+    interval: 86400
+  app_link:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/mp8atuk/Profiles/ma%D1%95ter/clash_config_app_block.yaml"
+    path: ./ruleset/clash_config_direct.yaml
+    interval: 86400
+  microsoft:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/mp8atuk/Profiles/ma%D1%95ter/clash_config_microsoft_service.yaml"
+    path: ./ruleset/microsoft.yaml
+    interval: 86400
+  apple:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/mp8atuk/Profiles/ma%D1%95ter/clash_config_apple_service.yaml"
+    path: ./ruleset/apple_service.yaml
+    interval: 86400
+  media:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/mp8atuk/Profiles/ma%D1%95ter/clash_config_media.yaml"
+    path: ./ruleset/media.yaml
+    interval: 86400
+  telegram:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/Telegram/Telegram.yaml"
+    path: ./ruleset/Telegram.yaml
+    interval: 86400
+  adblock:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/Advertising/Advertising.yaml"
+    path: ./ruleset/Advertising.yaml
+    interval: 86400
+  global-domain:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/Global/Global.yaml"
+    path: ./ruleset/global.yaml
+    interval: 86400
+  dingtalk:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/DingTalk/DingTalk.yaml"
+    path: ./ruleset/dingtalk.yaml
+    interval: 86400
+  wechat:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/WeChat/WeChat.yaml"
+    path: ./ruleset/wechat.yaml
+    interval: 86400
+
+
+    
+rules:
+  - DOMAIN-SUFFIX,dingtalk,🎯 全球直连
+  - DOMAIN-SUFFIX,wechat,🎯 全球直连
+  - RULE-SET,youtube-domain,Youtube
+  - RULE-SET,crypto-domain,Crypto
+  - RULE-SET,netflix-domain,Netflix
+  - RULE-SET,disneyplus-domain,DisneyPlus
+  - RULE-SET,jd-domain,JD
+  - RULE-SET,reject,🛑 全球拦截
+  - RULE-SET,direct_link,🎯 全球直连
+  - RULE-SET,app_link,🍃 应用净化
+  - RULE-SET,microsoft,Ⓜ️ 微软服务
+  - RULE-SET,apple,🍎 苹果服务
+  - RULE-SET,media,🌍 国外媒体
+  - RULE-SET,telegram,📲 电报信息
+  - RULE-SET,adblock,🆎 AdBlock
+  - RULE-SET,global-domain,🚀 节点选择
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,🐟 漏网之鱼

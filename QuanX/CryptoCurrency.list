@@ -40,3 +40,6 @@ host-suffix,tradingview.com,CRYPTO
 
 #Defi
 host-suffix,aave.com,CRYPTO
+
+#Miner
+host-suffix,ethermine.org,CRYPTO
